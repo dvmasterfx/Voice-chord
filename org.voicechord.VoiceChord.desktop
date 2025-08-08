@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Voice Chord
+Comment=Real-time voice chord recognition and MIDI conversion
+Exec=gjs main.js
+Icon=org.voicechord.VoiceChord
+Categories=AudioVideo;Audio;Midi;
+Keywords=voice;chord;midi;music;sequencer;
+StartupNotify=true
+StartupWMClass=org.voicechord.VoiceChord

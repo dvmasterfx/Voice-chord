@@ -1,0 +1,110 @@
+/* Voice Chord Application Styles */
+
+.chord-display {
+    font-family: 'Monospace';
+    color: #2e3436;
+    text-align: center;
+    min-height: 80px;
+    padding: 20px;
+}
+
+.dim-label {
+    opacity: 0.7;
+}
+
+.monospace {
+    font-family: 'Liberation Mono', 'DejaVu Sans Mono', monospace;
+    font-size: 10pt;
+}
+
+/* Sequencer status indicators */
+.recording {
+    background-color: #ff4444;
+    color: white;
+}
+
+.playing {
+    background-color: #44ff44;
+    color: black;
+}
+
+/* Level bar styling */
+levelbar block {
+    min-height: 8px;
+    border-radius: 4px;
+}
+
+levelbar block.filled {
+    background-color: #4CAF50;
+}
+
+levelbar block.filled.high {
+    background-color: #FF9800;
+}
+
+levelbar block.filled.full {
+    background-color: #F44336;
+}
+
+/* Button styling */
+button.suggested-action {
+    background-color: #3584e4;
+    color: white;
+}
+
+button.destructive-action {
+    background-color: #e01b24;
+    color: white;
+}
+
+/* Frame styling */
+frame {
+    border: 1px solid #d3d3d3;
+    border-radius: 6px;
+    margin: 5px;
+}
+
+frame > border {
+    border-radius: 6px;
+}
+
+/* Scrolled window styling */
+scrolledwindow {
+    border: 1px solid #d3d3d3;
+    border-radius: 3px;
+}
+
+/* Text view styling */
+textview {
+    background-color: #ffffff;
+    color: #2e3436;
+}
+
+textview text {
+    background-color: #ffffff;
+}
+
+/* Combo box styling */
+combobox {
+    min-width: 150px;
+}
+
+/* Main window styling */
+window {
+    background-color: #f6f5f4;
+}
+
+/* Status styling */
+.status-ready {
+    color: #26a269;
+}
+
+.status-recording {
+    color: #e01b24;
+    font-weight: bold;
+}
+
+.status-playing {
+    color: #1c71d8;
+    font-weight: bold;
+}

@@ -1,0 +1,46 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@
+
+override_dh_auto_install:
+	# Create directories
+	mkdir -p debian/voice-chord/usr/share/voice-chord
+	mkdir -p debian/voice-chord/usr/bin
+	mkdir -p debian/voice-chord/usr/share/applications
+	mkdir -p debian/voice-chord/usr/share/doc/voice-chord
+	mkdir -p debian/voice-chord/usr/share/icons/hicolor/scalable/apps
+	
+	# Install application files
+	install -m 644 main.js debian/voice-chord/usr/share/voice-chord/
+	install -m 644 audioProcessor.js debian/voice-chord/usr/share/voice-chord/
+	install -m 644 chordDetector.js debian/voice-chord/usr/share/voice-chord/
+	install -m 644 midiController.js debian/voice-chord/usr/share/voice-chord/
+	install -m 644 sequencer.js debian/voice-chord/usr/share/voice-chord/
+	install -m 644 fluidsynthController.js debian/voice-chord/usr/share/voice-chord/
+	install -m 644 enhancedAudioProcessor.js debian/voice-chord/usr/share/voice-chord/
+	install -m 644 enhancedDetector.js debian/voice-chord/usr/share/voice-chord/
+	install -m 644 enhancedSequencer.js debian/voice-chord/usr/share/voice-chord/
+	install -m 644 style.css debian/voice-chord/usr/share/voice-chord/
+	install -m 644 "Yamaha XG Sound Set.sf2" debian/voice-chord/usr/share/voice-chord/
+	
+	# Install launcher script
+	echo '#!/bin/bash' > debian/voice-chord/usr/bin/voice-chord
+	echo 'cd /usr/share/voice-chord' >> debian/voice-chord/usr/bin/voice-chord
+	echo 'exec gjs main.js "$$@"' >> debian/voice-chord/usr/bin/voice-chord
+	chmod 755 debian/voice-chord/usr/bin/voice-chord
+	
+	# Install icon and desktop file
+	install -m 644 icon.svg debian/voice-chord/usr/share/icons/hicolor/scalable/apps/org.voicechord.VoiceChord.svg
+	install -m 644 org.voicechord.VoiceChord.desktop debian/voice-chord/usr/share/applications/
+	
+	# Install documentation
+	install -m 644 README.md debian/voice-chord/usr/share/doc/voice-chord/
+
+override_dh_auto_build:
+	# No build required for GJS application
+
+override_dh_auto_clean:
+	# No clean required
+
+.PHONY: override_dh_auto_install override_dh_auto_build override_dh_auto_clean

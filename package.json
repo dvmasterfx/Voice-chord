@@ -1,0 +1,47 @@
+{
+  "name": "voice-chord",
+  "version": "1.0.0",
+  "description": "Real-time voice chord recognition application for Linux GNOME with advanced audio analysis and MIDI output",
+  "main": "main.js",
+  "homepage": "https://github.com/dvmasterfx/Voice-chord",
+  "keywords": ["music", "audio", "chord", "recognition", "midi", "gnome", "gjs", "fluidsynth"],
+  "author": "David Martins <dvdmartinsfx@gmail.com>",
+  "license": "GPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dvmasterfx/Voice-chord.git"
+  },
+  "engines": {
+    "gjs": ">=1.68.0"
+  },
+  "os": ["linux"],
+  "dependencies": {
+    "system": {
+      "gjs": ">=1.68.0",
+      "gtk4": ">=4.0",
+      "gstreamer": ">=1.18",
+      "fluidsynth": ">=2.0",
+      "libadwaita": ">=1.0"
+    }
+  },
+  "files": [
+    "main.js",
+    "audioProcessor.js", 
+    "chordDetector.js",
+    "midiController.js",
+    "sequencer.js",
+    "fluidsynthController.js",
+    "enhancedAudioProcessor.js",
+    "enhancedDetector.js",
+    "enhancedSequencer.js",
+    "style.css",
+    "icon.svg",
+    "run.sh",
+    "README.md",
+    "Yamaha XG Sound Set.sf2"
+  ],
+  "scripts": {
+    "start": "gjs main.js",
+    "test": "chmod +x test_*.sh && ./simple_test.sh"
+  }
+}

@@ -1,0 +1,35 @@
+Source: voice-chord
+Section: sound
+Priority: optional
+Maintainer: David Martins <dvdmartinsfx@gmail.com>
+Build-Depends: debhelper-compat (= 13)
+Standards-Version: 4.6.0
+Homepage: https://github.com/dvmasterfx/Voice-chord
+Vcs-Git: https://github.com/dvmasterfx/Voice-chord.git
+Vcs-Browser: https://github.com/dvmasterfx/Voice-chord
+
+Package: voice-chord
+Architecture: all
+Depends: ${misc:Depends},
+         gjs (>= 1.68.0),
+         libgtk-4-1 (>= 4.0),
+         libadwaita-1-0 (>= 1.0),
+         gstreamer1.0-tools,
+         gstreamer1.0-plugins-base,
+         gstreamer1.0-plugins-good,
+         gstreamer1.0-plugins-bad,
+         fluidsynth,
+         fluid-soundfont-gm
+Description: Real-time voice chord recognition application
+ Voice Chord is a real-time voice chord recognition application for Linux GNOME 
+ that detects individual notes, instruments, and chords from your voice, 
+ converting them to MIDI output with advanced sequencing capabilities.
+ .
+ Features:
+  * Real-time chord detection from voice input
+  * Individual note and instrument recognition
+  * MIDI conversion with multiple instruments
+  * Built-in sequencer for recording and playback
+  * Advanced FFT-based audio analysis
+  * Export to standard MIDI files
+  * Enhanced UI with confidence levels and waveform display

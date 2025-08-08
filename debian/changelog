@@ -1,0 +1,15 @@
+voice-chord (1.0.0-1) unstable; urgency=medium
+
+  * Initial release (Closes: #XXXXXX)
+  * Real-time voice chord recognition with advanced audio analysis
+  * Individual note and instrument detection capabilities
+  * MIDI output with multiple instrument support
+  * Built-in sequencer for recording and playback
+  * FFT-based frequency analysis for accurate detection
+  * Export functionality for standard MIDI files
+  * Enhanced UI with confidence levels and waveform display
+  * Support for major, minor, 7th, diminished, and augmented chords
+  * Automatic instrument switching based on voice recognition
+  * FluidSynth integration with Yamaha XG soundfont support
+
+ -- David Martins <dvdmartinsfx@gmail.com>  Thu, 08 Aug 2024 17:26:00 +0000
